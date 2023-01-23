@@ -14,12 +14,14 @@
 				"clear": false
 			},
 			"problemMatcher": [],
-			"dependsOn": ["antiquarian_build"]
+			"dependsOn": [
+				"antiquarian_build"
+			]
 		},
 		{
 			"label": "antiquarian_build",
 			"type": "shell",
-			"command": "g++ ${workspaceRoot}/source/main.cpp -o Antiquarian",
+			"command": "g++ ${workspaceRoot}/source/main.cpp -o Antiquarian -IC:\\SDL2-devel-2.26.2-mingw\\SDL2-2.26.2\\x86_64-w64-mingw32\\include\\SDL2 -lmingw32 -lSDL2main -lSDL2 -LC:\\SDL2-devel-2.26.2-mingw\\SDL2-2.26.2\\x86_64-w64-mingw32\\lib",
 			"presentation": {
 				"echo": true,
 				"reveal": "silent",
@@ -28,7 +30,11 @@
 				"showReuseMessage": false,
 				"clear": false
 			},
-			"problemMatcher": []
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
 		}
 	]
 }
